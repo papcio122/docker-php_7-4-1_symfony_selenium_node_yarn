@@ -27,7 +27,7 @@ RUN cd /root && wget https://github.com/mozilla/geckodriver/releases/download/v0
 RUN cd /root && tar -zxvf geckodriver-v0.24.0-linux64.tar.gz
 RUN cp /root/geckodriver /bin/
 RUN cd /root && wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-RUN apt-get install -y fonts-liberation libappindicator3-1 lsb-release libxss1 xdg-utils
+RUN apt-get install -y fonts-liberation libappindicator3-1 lsb-release libxss1 xdg-utils libgbm1
 RUN cd /root && dpkg -i google-chrome-stable_current_amd64.deb
 RUN rm -rfv /root/*
 RUN chmod 755 /bin/chromedriver
